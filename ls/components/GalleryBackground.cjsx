@@ -57,7 +57,6 @@ GalleryBackground = React.create-class do
 			@display-background
 
 	display-background: (resp) !->
-
 		if resp.photos.photo.length < 1
 			tag-page-record.update-tag-page-total @current-tag, resp.photos.pages
 			@get-photo-data @current-tag
