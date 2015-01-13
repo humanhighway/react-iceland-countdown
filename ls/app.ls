@@ -19,3 +19,18 @@ props =
 react.render do
 	CountDownApp props, null
 	document.get-element-by-id \app
+
+
+# play sound form soundcloud API
+SC
+	..initialize client_id: \af75459baf4e59d94d49fd80a6dc787e
+	..get do
+		\/tracks
+		q: 'sigur rós'
+		(tracks) !-> 
+			random-index = Math.floor tracks.length * Math.random!
+			track = tracks[random-index]
+			SC.stream do
+				"/tracks/#{track.id}"
+				(sound) !-> sound.play! 
+
