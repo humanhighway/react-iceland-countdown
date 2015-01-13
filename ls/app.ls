@@ -6,7 +6,7 @@ require! {
 
 props = 
 	place: \冰島 
-	target-day: "2015-03-26 20:30:00"
+	target-day: "2015/03/26 20:30:00"
 	tags: [ 'iceland' 'Blue Lagoon' 'Vik' 'Kerið' 'Reykjavík' 
 					'Hverfjall' 'Hallgrimskirkja' 'Pingvellir National Park' 'Gullfoss' 'Jökulsárlón'
 					'Vatnajökull National Park' 'Skogarfoss' 'Klambratún' 'Egilsstaðir' 'Landmannalaugar'
