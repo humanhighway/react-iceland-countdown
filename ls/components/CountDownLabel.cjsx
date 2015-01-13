@@ -17,10 +17,10 @@ CountDownLabel = React.create-class do
 	countdown: ->
 		countdown-time = @target-day - new Date!
 		day = Math.floor countdown-time / ONEDAY
-		hours = new Date(countdown-time).get-hours! - 8
+		hours = (new Date(countdown-time).get-hours! - 8 + 24) % 24
 		minutes = new Date(countdown-time).get-minutes!
 		seconds = new Date(countdown-time).get-seconds!
-		time = "#{day} 天 #{hours} 時 #{minutes} 分 #{seconds} 秒"
+		time = "#{day} 天 #{hours} 小時 #{minutes} 分 #{seconds} 秒"
 		@set-state { time: time }
 
 module.exports = CountDownLabel

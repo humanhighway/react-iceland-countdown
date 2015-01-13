@@ -7,7 +7,7 @@ webpackConfig = module.exports = {
   entry: ['./ls/app.ls'],
   // devtool: 'source-map',
   resolve: {
-    extensions: ['', ".js", '.cjsx', '.ls'],
+    extensions: ['', ".js", '.ls', '.cjsx'],
     modulesDirectories: [ 'node_modules' ]
   },
   output: {
