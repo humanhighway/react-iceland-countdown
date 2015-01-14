@@ -23,10 +23,10 @@ class BGMModel
 			"/tracks/#{track.id}"
 			(sound) !~>
 				@current-sound = sound
+				@current-sound.onfinish = !~> @play!
+				@current-sound.play!
 				is-iOS = detect.parse navigator.userAgent .os.family is \iOS
-				if !is-iOS or @is-user-click-page
-					@current-sound.play!
-				else
+				if is-iOS or @is-user-click-page
 					$ document .one \click, !~>
 						@current-sound.play!
 						@is-user-click-page = true

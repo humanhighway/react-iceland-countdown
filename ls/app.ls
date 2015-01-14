@@ -17,8 +17,15 @@ props =
 					'Snæfellsjökull' 'Reynisdrangar' 'Askja' 'Dynjandi' 'Budardalur'
 					'Siglufjörður' 'Hólmavík' 'Geysir' 'Mývatn' ]
 
+# init react app
+
 react.render do
 	CountDownApp props, null
 	document.get-element-by-id \app
 
-bgm = new BGMModel!
+# play bgm
+
+$ document .ready !~> 
+	set-timeout do
+		!~> bgm = new BGMModel!
+		0
