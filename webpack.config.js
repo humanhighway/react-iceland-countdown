@@ -7,6 +7,9 @@ webpackConfig = module.exports = {
   entry: ['./ls/app.ls'],
   // devtool: 'source-map',
   resolve: {
+    alias: {
+      "detect": "./../js/vendor/detect.min.js",
+    },
     extensions: ['', ".js", '.ls', '.cjsx'],
     modulesDirectories: [ 'node_modules' ]
   },
