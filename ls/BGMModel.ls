@@ -21,9 +21,9 @@ class BGMModel
 
 		SC.stream do
 			"/tracks/#{track.id}"
+			onfinish: !~> @play!
 			(sound) !~>
 				@current-sound = sound
-				@current-sound.onfinish = !~> @play!
 				@current-sound.play!
 				is-iOS = detect.parse navigator.userAgent .os.family is \iOS
 				is-Andriod = detect.parse navigator.userAgent .os.family is \Andriod
